@@ -26,7 +26,7 @@ const server = new ApolloServer({
 server.applyMiddleware({ app });
 app.use((req, res) => {
   res.status(200);
-  res.send("Hello!");
+  res.redirect("/graphql");
   res.end();
 });
 app.listen({ port: 4000 }, () =>
